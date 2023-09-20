@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Response Example</title>
+</head>
+<body>
+    <script>
+        if (window.location.href === '/') {
+            const responseData = {
+                "widgets": [
+                    {
+                        "widgetType": "bills",
+                        "widgetOrderId": "someId-bill",
+                        "dataSourcePath": "widgets/bill/clientNo",
+                        "method": "GET",
+                        "options": null
+                    },
+                    {
+                        "widgetType": "shopOffer",
+                        "widgetOrderId": "someId-shopOffer",
+                        "dataSourcePath": "widgets/shopOffer/clientNo",
+                        "method": "GET",
+                        "options": null
+                    },
+                    {
+                        "widgetType": "electricityConsumption",
+                        "widgetOrderId": "someId-eleCon",
+                        "dataSourcePath": null,
+                        "method": null,
+                        "options": null
+                    },
+                    {
+                        "widgetType": "electricityPrice",
+                        "widgetOrderId": "someId-nordpool",
+                        "dataSourcePath": null,
+                        "method": null,
+                        "options": null
+                    },
+                    {
+                        "widgetType": "contentOffer",
+                        "widgetOrderId": "someId-contentOffer",
+                        "dataSourcePath": "widgets/contentOffer/clientNo",
+                        "method": "GET",
+                        "options": null
+                    },
+                    {
+                        "widgetType": "custom",
+                        "widgetOrderId": "someId-2-custom",
+                        "dataSourcePath": "widgets/somepath/clientNo",
+                        "method": "GET",
+                        "options": null
+                    },
+                    {
+                        "widgetType": "custom",
+                        "widgetOrderId": "someId-1-custom",
+                        "dataSourcePath": "widgets/someotherpath/clientNo",
+                        "method": "GET",
+                        "options": null
+                    },
+                    {
+                        "widgetType": "newContract",
+                        "widgetOrderId": "someId-newContr",
+                        "dataSourcePath": "widgets/newContract/clientNo",
+                        "method": "GET",
+                        "options": null
+                    },
+                    {
+                        "widgetType": "fsm",
+                        "widgetOrderId": "someId-fsm",
+                        "dataSourcePath": "widgets/fsm/clientNo",
+                        "method": "GET",
+                        "options": null
+                    }
+                ],
+                "widgetOrderSmallScreen": [
+                    {
+                        "orderId": "someId-bill",
+                        "size": "M"
+                    },
+                    "someId-1-custom",
+                    "someId-2-custom",
+                    "someId-shopOffer",
+                    "someId-contentOffer"
+                ],
+                "widgetOrderLargeScreen": [
+                    "someId-bill",
+                    "someId-contentOffer",
+                    "someId-1-custom",
+                    "someId-shopOffer"
+                ]
+            };
+            
+            showResponseData(responseData);
+        }
+        
+        function showResponseData(data) {
+            const jsonData = JSON.stringify(data, null, 2);
+            document.body.innerHTML = `<pre>${jsonData}</pre>`;
+        }
+    </script>
+</body>
+</html>
